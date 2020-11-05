@@ -361,13 +361,16 @@ export const addVaccine = (newBird, email) => async (dispatch) => {
     for (let i = 0; i < filteredVaccineSchedule.length; i++) {
       let calculatedTime = '';
       if (i === 0) {
-        dayCount = 0 + filteredVaccineSchedule[i].interval;
+        dayCount = 1 //0 + filteredVaccineSchedule[i].interval;
       } else {
         dayCount += filteredVaccineSchedule[i].interval;
       }
       calculatedTime = dayjs()
-        .add(dayCount, 'day') //week
+        .add(dayCount, 'minute') //day
         .format();
+        console.log('------------------')
+        console.log(calculatedTime)
+        console.log('------------------')
 
       filteredVaccineSchedule[i].nextVaccinationDate = calculatedTime;
 

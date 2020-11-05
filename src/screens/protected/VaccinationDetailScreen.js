@@ -102,6 +102,7 @@ const VaccinationDetailScreen = ({route, navigation, deleteVaccine}) => {
             icon="book"
           />
         ))}
+        <View style={styles.empty}></View>
       </ScrollView>
 
       <View
@@ -143,9 +144,16 @@ export default connect(null, {deleteVaccine})(VaccinationDetailScreen);
 
 const styles = StyleSheet.create({
   container: {
-    //flex: 1,
+    // flex: 1,
     minHeight: height - 125,
     backgroundColor: 'rgba(255, 255, 255, 0.5)',
+  },
+  empty: {
+    height: 200,
+    width: 50,
+    // backgroundColor: 'red',
+    // marginBottom: 500,
+    paddingBottom: 400,
   },
   textWhite: {
     color: '#fff',
