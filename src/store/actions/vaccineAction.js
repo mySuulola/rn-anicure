@@ -366,7 +366,7 @@ export const addVaccine = (newBird, email) => async (dispatch) => {
         dayCount += filteredVaccineSchedule[i].interval;
       }
       calculatedTime = dayjs()
-        .add(dayCount, 'minute') //day
+        .add(dayCount, 'day') //day
         .format();
         console.log('------------------')
         console.log(calculatedTime)
